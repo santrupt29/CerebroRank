@@ -1,0 +1,168 @@
+# =============================================================================
+#  MarvelGraphRank — master configuration
+#  Changing seeds + category_roots is sufficient to crawl a DIFFERENT topic.
+# =============================================================================
+
+# --------------- Crawl seeds (titles as on Wikipedia) ----------------------
+seeds:
+  - "Marvel Cinematic Universe"
+  - "Marvel Comics"
+  - "Marvel Studios"
+  - "Iron Man"
+  - "Spider-Man"
+  - "X-Men"
+
+# --------------- Category roots for allowed-set expansion -------------------
+category_roots:
+  - "Category:Marvel Comics"
+  - "Category:Marvel Cinematic Universe"
+  - "Category:Marvel Studios"
+
+# Subcategory depth for allowed-set BFS (0 = root only, 2 = root+2 levels)
+category_depth: 2
+
+# --------------- BFS controls -----------------------------------------------
+max_depth: 3            # maximum BFS hop distance from seeds
+max_nodes: 100          # hard cap on nodes
+max_new_nodes_per_page: 50   # limits queue growth per page; does NOT cap edges
+
+# --------------- Ethical rate-limiting --------------------------------------
+delay_min: 1.0          # seconds — uniform(delay_min, delay_max) between requests
+delay_max: 1.5
+max_retries: 5          # give up after this many attempts on 429/503
+backoff_base: 2         # exponential backoff multiplier
+
+# --------------- Identity ---------------------------------------------------
+user_agent: "MarvelGraphRank/1.0 (Academic mini-project, SPCE Mumbai, Web Data Mining Sem VII; contact: team@example.com; github.com/example/MarvelGraphRank)"
+
+# --------------- Endpoints (domain-agnostic) --------------------------------
+wiki_base_url: "https://en.wikipedia.org"
+api_endpoint:  "https://en.wikipedia.org/w/api.php"
+robots_url:    "https://en.wikipedia.org/robots.txt"
+
+# --------------- Output paths -----------------------------------------------
+cache_dir:          "data/cache"
+edgelist_path:      "data/edgelist.csv"
+nodes_path:         "data/nodes.csv"
+crawl_report_path:  "reports/crawl_report.json"
+state_file:         "data/cache/_crawl_state.json"
+
+# --------------- Parsing filters --------------------------------------------
+dropped_namespaces:
+  - "Help:"
+  - "File:"
+  - "Special:"
+  - "Talk:"
+  - "Wikipedia:"
+  - "Portal:"
+  - "Template:"
+  - "Template_talk:"
+  - "Category:"
+  - "User:"
+  - "MediaWiki:"
+  - "Module:"
+  - "Draft:"
+
+# CSS selectors removed BEFORE link extraction (navboxes distort PageRank)
+removed_selectors:
+  - ".navbox"
+  - ".vertical-navbox"
+  - ".sidebar"
+  - ".reflist"
+  - ".references"
+  - ".hatnote"
+  - ".mw-editsection"
+  - ".metadata"
+  - ".refbegin"
+  - ".toc"
+  - "table.navbox"
+  - "div.navbox"
+  - ".ambox"
+  - ".succession-box"
+
+# Section headings after which all content is dropped
+dropped_sections:
+  - "References"
+  - "External links"
+  - "Notes"
+  - "See also"
+  - "Further reading"
+  - "Footnotes"
+
+# --------------- Node-type classification rules -----------------------------
+# IMPORTANT: rules are checked in declaration order — first match wins.
+# 'list' must come first so "Lists of Marvel Comics characters" → list, not character.
+node_type_rules:
+  list:
+    - "list of"
+    - "lists of"
+  character:
+    - "fictional character"
+    - "comics character"
+    - "marvel character"
+    - "avengers member"
+    - "superhero"
+    - "supervillain"
+  film:
+    - "cinematic universe film"
+    - "superhero film"
+    - "marvel film"
+    - "american film"
+    - "feature film"
+  tv_series:
+    - "television series"
+    - "tv series"
+    - "streaming series"
+    - "disney+ original"
+    - "disney plus"
+    - "marvel television"
+  comic_series:
+    - "comic book series"
+    - "comic book title"
+    - "marvel comics series"
+    - "ongoing series"
+    - "limited series"
+    - "comic book"
+  person:
+    - "film director"
+    - "comic book writer"
+    - "comic book artist"
+    - "american actor"
+    - "voice actor"
+    - "film producer"
+    - "screenwriter"
+  company:
+    - "comic book publisher"
+    - "film studio"
+    - "entertainment company"
+    - "production company"
+    - "marvel studios"
+    - "disney"
+
+# --------------- Stage 2: Graph builder -------------------------------------
+keep_giant_wcc: true        # drop nodes outside the giant weakly-connected component
+
+# --------------- Stage 2: Algorithm hyper-parameters -----------------------
+pagerank_d: 0.85            # damping factor
+pagerank_tol: 1.0e-6        # L1 convergence threshold
+pagerank_max_iter: 100      # hard iteration cap
+
+hits_tol: 1.0e-6
+hits_max_iter: 100
+
+# --------------- Stage 2: Output paths -------------------------------------
+scores_path:        "data/scores.csv"
+data_quality_path:  "reports/data_quality.json"
+validation_path:    "reports/validation.json"
+
+# --------------- Stage 3: Evaluator & Reports ------------------------------
+figures_dir:        "reports/figures"
+tables_dir:         "reports/tables"
+summary_path:       "reports/summary.md"
+network_top_n:      75
+network_color_by:   "authority"      # "authority" or "community"
+damping_factors:
+  - 0.5
+  - 0.7
+  - 0.85
+  - 0.95

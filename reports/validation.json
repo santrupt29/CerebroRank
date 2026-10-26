@@ -1,0 +1,27 @@
+{
+  "pagerank": {
+    "mse": 4.014686997951853e-13,
+    "max_absolute_error": 5.156415469165232e-06,
+    "spearman_rho": 1.0,
+    "kendall_tau": 1.0,
+    "top10_overlap": 10,
+    "custom_sum": 1.0,
+    "nx_sum": 0.9999999999999994
+  },
+  "hits": {
+    "authority": {
+      "mse": 2.3655932104166323e-19,
+      "max_absolute_error": 4.090127680989042e-09,
+      "spearman_rho": 1.0,
+      "kendall_tau": 0.9999999999999999,
+      "top10_overlap": 10
+    },
+    "hub": {
+      "mse": 4.5404541863643065e-21,
+      "max_absolute_error": 1.7931910123447636e-10,
+      "spearman_rho": 1.0,
+      "kendall_tau": 0.9999999999999998,
+      "top10_overlap": 10
+    }
+  }
+}

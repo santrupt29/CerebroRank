@@ -1,0 +1,16 @@
+Rank,Title,Node_Type,PageRank,Authority,Hub,In_Degree,Out_Degree,PR_Rank,Auth_Rank,Hub_Rank
+1,Marvel_Comics,comic_series,0.199456,0.627497,0.104326,98,9,1,1,32
+2,X-Men,character,0.103185,0.378627,0.097294,45,7,2,2,38
+3,Spider-Man,character,0.103117,0.368399,0.135384,43,8,3,3,17
+4,Marvel_Cinematic_Universe,company,0.076222,0.354960,0.110413,40,6,4,4,29
+5,Marvel_Studios,film,0.046655,0.063394,0.149927,9,7,5,12,11
+6,Iron_Man,character,0.045698,0.271811,0.120843,28,4,6,5,21
+7,Spider-Man:_No_Way_Home,character,0.035989,0.126659,0.103601,13,5,7,7,33
+8,Mutant_(Marvel_Comics),character,0.029361,0.256021,0.125273,30,5,8,6,20
+9,Ronald_Perelman,other,0.026188,0.017765,0.043845,2,1,9,17,79
+10,Uncle_Ben,character,0.022994,0.068464,0.103238,8,4,10,11,34
+11,Marvel_Edge,other,0.022758,0.015482,0.096041,2,3,11,20,40
+12,Clive_Barker,person,0.021818,0.015365,0.000000,3,0,12,21,100
+13,Tsunami_(Marvel_Comics),other,0.020523,0.007290,0.043845,1,1,13,28,79
+14,Ann_Nocenti,comic_series,0.015777,0.094573,0.117245,9,6,14,10,24
+15,Chamber_(character),character,0.014937,0.032359,0.088189,4,3,15,14,46

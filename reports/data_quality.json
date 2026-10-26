@@ -1,0 +1,14 @@
+{
+  "nodes_raw": 100,
+  "edges_raw": 381,
+  "self_loops_removed": 0,
+  "nodes_after_filter": 100,
+  "edges_after_filter": 381,
+  "nodes_dropped_wcc": 0,
+  "dangling_node_count": 1,
+  "weakly_connected_components": 1,
+  "strongly_connected_components": 80,
+  "giant_wcc_size": 100,
+  "density": 0.03848485,
+  "avg_clustering_coefficient": 0.655162
+}

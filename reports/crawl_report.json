@@ -1,0 +1,12 @@
+{
+  "pages_fetched": 94,
+  "api_calls": 94,
+  "cache_hits": 262,
+  "robots_skipped": 0,
+  "retries": 0,
+  "backoff_events": 0,
+  "rejected_by_category": 0,
+  "total_runtime": 128.38,
+  "nodes": 100,
+  "edges": 381
+}

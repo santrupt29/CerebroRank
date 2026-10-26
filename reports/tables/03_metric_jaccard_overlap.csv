@@ -1,0 +1,11 @@
+Metric_Pair,Jaccard_at_10,Jaccard_at_20
+PageRank vs In-Degree,0.6667,0.6
+PageRank vs Out-Degree,0.1111,0.1429
+PageRank vs Authority,0.5385,0.6
+PageRank vs Hub,0.0,0.0811
+In-Degree vs Out-Degree,0.1111,0.1765
+In-Degree vs Authority,0.8182,0.9048
+In-Degree vs Hub,0.0,0.1111
+Out-Degree vs Authority,0.1111,0.1765
+Out-Degree vs Hub,0.5385,0.6
+Authority vs Hub,0.0,0.1111

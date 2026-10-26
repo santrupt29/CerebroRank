@@ -1,0 +1,4 @@
+Archetype,Title,Node_Type,PageRank,Authority,Hub,Explanation
+High Hub / Low Authority,Sabreclaw,character,0.001685,0.0,0.19141,Reference pages that curate links to major entities; cite many authorities but receive few citations.
+High Authority / High PageRank,Marvel_Comics,comic_series,0.199456,0.627497,0.104326,Core franchise anchors that are heavily cited by major hub articles throughout the Marvel ecosystem.
+"Negative Result (High PR, Low Authority)",Tsunami_(Marvel_Comics),other,0.020523,0.00729,0.043845,"'Tsunami_(Marvel_Comics)' ranks #13 in PageRank but drops to #28 in HITS Authority. Its 1 incoming links originate from nodes with a low average hub score of 0.1043. Because HITS strictly weights authority by the hub score of citing pages (a(v) = Σ h(u)), low-hub in-links fail to confer authority, whereas PageRank preserves mass via random-walk paths and uniform damping."

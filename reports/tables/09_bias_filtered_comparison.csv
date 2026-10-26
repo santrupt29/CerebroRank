@@ -1,0 +1,11 @@
+Rank,Full_Graph_Title,Full_Graph_PR,Filtered_Graph_Title,Filtered_Graph_PR,Rank_Shift_in_Filtered
+1,Marvel_Comics,0.199456,Marvel_Comics,0.204048,0
+2,X-Men,0.103185,X-Men,0.108499,0
+3,Spider-Man,0.103117,Spider-Man,0.107069,0
+4,Marvel_Cinematic_Universe,0.076222,Marvel_Cinematic_Universe,0.080102,0
+5,Marvel_Studios,0.046655,Marvel_Studios,0.05011,0
+6,Iron_Man,0.045698,Iron_Man,0.048854,0
+7,Spider-Man:_No_Way_Home,0.035989,Spider-Man:_No_Way_Home,0.037191,0
+8,Mutant_(Marvel_Comics),0.029361,Mutant_(Marvel_Comics),0.029333,0
+9,Ronald_Perelman,0.026188,Ronald_Perelman,0.029327,0
+10,Uncle_Ben,0.022994,Marvel_Edge,0.025536,1

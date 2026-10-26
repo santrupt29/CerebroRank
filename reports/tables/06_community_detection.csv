@@ -1,0 +1,5 @@
+Community_ID,Label,Size,Fraction_of_Graph,Dominant_Type,Top_5_Nodes_PageRank
+1,C1: Marvel Comics & Characters,34,0.34,character,"Marvel_Comics (0.1995), Clive_Barker (0.0218), Tsunami_(Marvel_Comics) (0.0205), Destiny_of_X (0.0142), Jae_Lee (0.0142)"
+2,C2: Spider-Man & Characters,26,0.26,character,"Spider-Man (0.1031), Spider-Man:_No_Way_Home (0.0360), Uncle_Ben (0.0230), Marvel_Edge (0.0228), Ann_Nocenti (0.0158)"
+3,C3: Marvel Cinematic Universe & Characters,21,0.21,character,"Marvel_Cinematic_Universe (0.0762), Marvel_Studios (0.0467), Iron_Man (0.0457), Ronald_Perelman (0.0262), Runaways_(TV_series) (0.0132)"
+4,C4: X-Men & Characters,19,0.19,character,"X-Men (0.1032), Mutant_(Marvel_Comics) (0.0294), Chamber_(character) (0.0149), Living_Monolith (0.0042), Dragonfly_(Marvel_Comics) (0.0020)"

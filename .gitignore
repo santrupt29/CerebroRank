@@ -1,0 +1,73 @@
+# =============================================================================
+#  MarvelGraphRank — .gitignore
+# =============================================================================
+
+# --- Virtual Environments ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Python Bytecode & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Testing & Coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+
+# --- IDEs & Code Editors ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# --- Operating System Artifacts ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# --- Streamlit Runtime ---
+.streamlit/secrets.toml
+
+# --- Large Raw Crawl Cache (75MB+ of ephemeral HTML/API responses) ---
+# Keep core dataset (data/*.csv) and state index, ignore heavy raw page dumps
+data/cache/*
+!data/cache/_crawl_state.json
+!data/cache/_robots.txt
+!data/cache/.gitkeep
